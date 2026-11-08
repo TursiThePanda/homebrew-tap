@@ -7,14 +7,15 @@ cask "droidmount" do
   desc "Mount Android phones as Finder disks"
   homepage "https://github.com/TursiThePanda/droidmount"
 
+  # Git tags, not "latest release": GitHub leaves pre-releases out of the latter.
   livecheck do
-    url :url
-    strategy :github_latest
+    url "https://github.com/TursiThePanda/droidmount.git"
+    strategy :git
   end
 
-  depends_on cask: "macfuse"
-  depends_on macos: ">= :tahoe"
   depends_on arch: :arm64
+  depends_on cask: "macfuse"
+  depends_on macos: :tahoe
 
   app "Droidmount.app"
 
