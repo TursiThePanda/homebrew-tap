@@ -1,6 +1,6 @@
 cask "droidmount" do
-  version "0.1.0"
-  sha256 "fd4f76d87fee9d29b13b10a2ac4f1151963bb5c0924370ce22679bbee5460f28"
+  version "0.1.1"
+  sha256 "75390f058dbd9f6543643025b9dccf38d53f4770aac58c63a3118863e6efa981"
 
   url "https://github.com/TursiThePanda/droidmount/releases/download/v#{version}/Droidmount-#{version}.dmg"
   name "Droidmount"
@@ -13,6 +13,7 @@ cask "droidmount" do
     strategy :git
   end
 
+  auto_updates true
   depends_on arch: :arm64
   depends_on cask: "macfuse"
   depends_on macos: :tahoe
@@ -23,6 +24,8 @@ cask "droidmount" do
 
   zap trash: [
     "~/Library/Application Support/Droidmount",
+    "~/Library/Caches/io.github.tursithepanda.droidmount",
+    "~/Library/HTTPStorages/io.github.tursithepanda.droidmount",
     "~/Library/Logs/Droidmount.log",
     "~/Library/Preferences/io.github.tursithepanda.droidmount.plist",
   ]
