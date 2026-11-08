@@ -1,6 +1,8 @@
 # TursiThePanda's Homebrew tap
 
 ```sh
+brew tap tursithepanda/tap
+brew trust --cask tursithepanda/tap/droidmount   # Homebrew asks you to trust third-party casks once
 brew install --cask tursithepanda/tap/droidmount
 ```
 
