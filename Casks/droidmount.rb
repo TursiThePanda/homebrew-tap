@@ -1,6 +1,6 @@
 cask "droidmount" do
-  version "0.1.1"
-  sha256 "75390f058dbd9f6543643025b9dccf38d53f4770aac58c63a3118863e6efa981"
+  version "0.1.2"
+  sha256 "9692e2dc4072a4332caec804fb1768b57faa1a806f64ea9e14591685963d87d2"
 
   url "https://github.com/TursiThePanda/droidmount/releases/download/v#{version}/Droidmount-#{version}.dmg"
   name "Droidmount"
